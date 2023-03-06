@@ -24,7 +24,11 @@
 </nav>
 
 {#if open}
-	<div in:slide out:blur class="absolute top-0 z-40 h-screen w-screen bg-black px-8 text-4xl">
+	<div
+		in:slide
+		out:blur
+		class="fixed bottom-0 left-0 z-40 h-full w-full bg-black px-8 text-4xl md:hidden"
+	>
 		<ul class="mt-32 list-inside list-disc space-y-3 text-moonlightText">
 			<div class="background mb-6 h-1 w-full" />
 			<li><a class:selected2={data.currentPath == '/blog'} href="/blog">/blog</a></li>
@@ -34,7 +38,7 @@
 {/if}
 
 {#key data.currentPath}
-	<div in:fly={{ y: -30, duration: 200, delay: 150 }} out:fly={{ y: -30, duration: 150 }}>
+	<div in:fly={{ y: -30, duration: 200, delay: 150 }} out:fly={{ y: -30, duration: 150, delay: 150 }}>
 		<slot />
 	</div>
 {/key}
