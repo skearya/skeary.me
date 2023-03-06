@@ -26,7 +26,7 @@
 {#if open}
 	<div
 		in:slide
-		out:blur
+		out:blur={{ duration: 400 }}
 		class="fixed bottom-0 left-0 z-40 h-full w-full bg-black px-8 text-4xl md:hidden"
 	>
 		<ul class="mt-32 list-inside list-disc space-y-3 text-moonlightText">
@@ -38,7 +38,7 @@
 {/if}
 
 {#key data.currentPath}
-	<div in:fly={{ y: -30, duration: 200, delay: 150 }} out:fly={{ y: -30, duration: 150, delay: 150 }}>
+	<div in:slide={{ delay: 100 }}>
 		<slot />
 	</div>
 {/key}
