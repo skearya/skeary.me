@@ -12,9 +12,9 @@
 	<div
 		class="mx-6 flex items-center justify-between rounded-2xl border border-moonlightWhite border-opacity-10 bg-moonlightSoft bg-opacity-10 p-4 backdrop-blur-xl backdrop-filter transition-all"
 	>
-		<a href="/"><img src="cat.svg" class="-scale-x-100" alt="cat" width="40px" height="40px" /></a>
+		<a href="/"><img src="/cat.svg" alt="cat" width="40px" height="40px" /></a>
 		<div class="hidden space-x-4 md:block">
-			<a href="/blog" class:selected={data.currentPath == '/blog'}>blog</a>
+			<a href="/thoughts" class:selected={data.currentPath.startsWith('/thoughts')}>thoughts</a>
 			<a href="/about" class:selected={data.currentPath == '/about'}>about</a>
 		</div>
 		<div class="block md:hidden">
@@ -31,7 +31,7 @@
 	>
 		<ul class="mt-32 list-inside list-disc space-y-3 text-moonlightText">
 			<div class="background mb-6 h-1 w-full" />
-			<li><a class:selected2={data.currentPath == '/blog'} href="/blog">/blog</a></li>
+			<li><a class:selected2={data.currentPath.startsWith('/thoughts')} href="/thoughts">/thoughts</a></li>
 			<li><a class:selected2={data.currentPath == '/about'} href="/about">/about</a></li>
 		</ul>
 	</div>
@@ -62,6 +62,10 @@
 		font-weight: 400;
 		color: white;
 		overscroll-behavior-y: none;
+	}
+	
+	img {
+		transform: scaleX(-1);;
 	}
 
 	.background {

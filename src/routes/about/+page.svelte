@@ -1,6 +1,7 @@
 <script>
 	import Discord from '$lib/Discord.svelte';
 	import Fish from '$lib/Fish.svelte';
+	import Line from '$lib/Line.svelte';
 
 	let links = [
 		{
@@ -81,10 +82,11 @@
 	>
 		<div class="flex flex-col items-stretch justify-between gap-x-4 sm:flex-row">
 			<div class="mb-4 w-full space-y-4">
-				<h1 class="text-4xl">about me</h1>
-				<div class="background h-2 w-full rounded-sm" />
+				<h1 class="text-3xl sm:text-4xl">about me</h1>
+				<Line />
 				<h1>
-					a 16 year old in Georgia interested in rhythm games, rhythm game music, programming and procrastination. <a
+					A 16 year old in Georgia interested in rhythm games, rhythm game music, programming and
+					procrastination. <a
 						class=" text-blue-400"
 						href="https://scoresaber.com/u/76561198365846923"
 						>Top 200 global (peak #145) in Beat Saber</a
@@ -95,8 +97,8 @@
 		</div>
 
 		<div class="space-y-4">
-			<h1 class="text-4xl">links</h1>
-			<div class="background h-2 w-full rounded-sm" />
+			<h1 class="text-3xl sm:text-4xl">links</h1>
+			<Line />
 			<div class="grid grid-cols-1 gap-4 text-gray-300 sm:grid-cols-2 md:grid-cols-3">
 				{#each links as link}
 					<a
@@ -114,8 +116,8 @@
 		</div>
 
 		<div class="space-y-4">
-			<h1 class="text-4xl">favorite songs</h1>
-			<div class="background h-2 w-full rounded-sm" />
+			<h1 class="text-3xl sm:text-4xl">favorite songs</h1>
+			<Line />
 			<iframe
 				title="spotify embed"
 				style="border-radius: 12px"
@@ -130,8 +132,8 @@
 		</div>
 
 		<div class="space-y-4 pb-10">
-			<h1 class="text-4xl">stuff i use</h1>
-			<div class="background h-2 w-full rounded-sm" />
+			<h1 class="text-3xl sm:text-4xl">stuff i use</h1>
+			<Line />
 			<div class="grid grid-cols-1 gap-4 text-gray-300 sm:grid-cols-2 md:grid-cols-3">
 				{#each tools as tool}
 					<div
@@ -149,10 +151,3 @@
 
 	<Fish />
 </main>
-
-<style class="postcss">
-	.background {
-		background: rgb(245, 142, 224);
-		background: linear-gradient(90deg, rgba(245, 142, 224, 1) 0%, rgba(0, 0, 0, 0) 85%);
-	}
-</style>
